@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rita Cetina — Una Figura Clave en el Impulso a la Educación y la Justicia Social</title>
+
+  <style>
+    :root{
+      /* Colorful + professional ingredient palette */
+      --bg1:#070a18;
+      --bg2:#0b1630;
+
+      --card: rgba(10, 18, 40, 0.62);
+      --border: rgba(240, 248, 255, 0.12);
+
+      --text:#eef5ff;
+      --muted:#b7c6e6;
+
+      --pink:#ff4fd8;
+      --purple:#8b5cf6;
+      --blue:#38bdf8;
+      --cyan:#22d3ee;
+      --green:#34d399;
+      --amber:#fbbf24;
+
+      --shadow: 0 22px 60px rgba(0,0,0,.45);
+      --shadow2: 0 12px 38px rgba(0,0,0,.35);
+
+      --rXL: 22px;
+      --rLG: 18px;
+      --rMD: 14px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      line-height:1.95;
+
+      background:
+        radial-gradient(1100px 520px at 10% 10%, rgba(255,79,216,.22), transparent 55%),
+        radial-gradient(950px 540px at 92% 18%, rgba(56,189,248,.20), transparent 58%),
+        radial-gradient(900px 520px at 70% 95%, rgba(52,211,153,.16), transparent 55%),
+        radial-gradient(900px 520px at 28% 85%, rgba(139,92,246,.18), transparent 55%),
+        linear-gradient(135deg, var(--bg1), var(--bg2));
+    }
+
+    .wrap{
+      max-width: 1140px;
+      margin: 42px auto;
+      padding: 0 18px;
+    }
+
+    /* Hero */
+    .hero{
+      border: 1px solid var(--border);
+      border-radius: var(--rXL);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+      background:
+        linear-gradient(135deg, rgba(255,79,216,.14), rgba(139,92,246,.12)),
+        linear-gradient(135deg, rgba(56,189,248,.10), rgba(34,211,238,.08));
+      backdrop-filter: blur(10px);
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(900px 320px at 15% 10%, rgba(255,79,216,.45), transparent 55%),
+        radial-gradient(820px 320px at 92% 25%, rgba(56,189,248,.35), transparent 55%),
+        radial-gradient(820px 320px at 70% 95%, rgba(52,211,153,.28), transparent 55%);
+      opacity:.35;
+      pointer-events:none;
+    }
+
+    .hero-inner{
+      position:relative;
+      padding: 34px 34px 26px 34px;
+    }
+
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 9px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(240,248,255,.18);
+      background: rgba(10,18,40,.35);
+      box-shadow: 0 10px 25px rgba(0,0,0,.25);
+      font-weight: 800;
+      letter-spacing: .2px;
+      color: var(--text);
+      font-size: .93rem;
+    }
+
+    .spark{
+      width:12px;height:12px;border-radius:50%;
+      background: conic-gradient(from 180deg, var(--pink), var(--purple), var(--blue), var(--green), var(--amber), var(--pink));
+      box-shadow: 0 0 0 4px rgba(255,79,216,.14);
+    }
+
+    h1{
+      margin: 16px 0 10px 0;
+      font-size: clamp(1.95rem, 2.7vw, 2.85rem);
+      line-height: 1.18;
+      color: #f4f7ff;
+      text-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+
+    .subtitle{
+      margin:0;
+      max-width: 95ch;
+      color: var(--muted);
+      font-size: 1.07rem;
+    }
+
+    /* Main Card */
+    .card{
+      margin-top: 22px;
+      border: 1px solid var(--border);
+      border-radius: var(--rXL);
+      box-shadow: var(--shadow2);
+      overflow:hidden;
+      background: var(--card);
+      backdrop-filter: blur(10px);
+    }
+
+    .card-inner{
+      padding: 34px;
+    }
+
+    h2{
+      margin: 34px 0 12px 0;
+      font-size: 1.55rem;
+      color:#f4f7ff;
+      padding-left: 14px;
+      border-left: 6px solid transparent;
+      border-image: linear-gradient(180deg, var(--blue), var(--pink)) 1;
+    }
+
+    p{
+      margin: 16px 0;
+      font-size: 1.06rem;
+      color: #eef5ff;
+    }
+
+    /* Ingredient link style */
+    a{
+      color:#0b1220;
+      font-weight: 900;
+      text-decoration: none;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--green), var(--blue));
+      box-shadow: 0 10px 22px rgba(0,0,0,.25);
+      transition: transform .15s ease, filter .15s ease;
+      display:inline-block;
+    }
+    a:hover{
+      transform: translateY(-1px);
+      filter: brightness(1.08);
+      background: linear-gradient(135deg, var(--pink), var(--purple), var(--blue));
+    }
+
+    /* Mid highlight panel */
+    .panel{
+      margin: 22px 0;
+      padding: 18px;
+      border-radius: var(--rLG);
+      border: 1px solid rgba(240,248,255,.14);
+      background:
+        linear-gradient(135deg, rgba(56,189,248,.14), rgba(255,79,216,.10)),
+        rgba(10,18,40,.50);
+      box-shadow: 0 14px 30px rgba(0,0,0,.25);
+    }
+    .panel strong{ color:#ffe7a3; }
+
+    .divider{
+      height:1px;
+      background: rgba(240,248,255,.12);
+      margin: 30px 0 10px 0;
+    }
+
+    .footer{
+      margin-top: 18px;
+      text-align:center;
+      color: rgba(240,248,255,.72);
+      font-size: .95rem;
+      padding: 10px 6px 0 6px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="hero" aria-label="Encabezado">
+      <div class="hero-inner">
+        <div class="kicker"><span class="spark" aria-hidden="true"></span> Educación • Igualdad • Justicia Social</div>
+        <h1>Rita Cetina — Una Figura Clave en el Impulso a la Educación y la Justicia Social</h1>
+        <p class="subtitle">
+          Rita Cetina es un nombre que ha adquirido relevancia dentro del ámbito educativo y social en México, especialmente en el contexto de los programas de apoyo dirigidos a la educación básica. Más allá de representar una identidad histórica, Rita Cetina simboliza el compromiso con la enseñanza, la igualdad de oportunidades y el desarrollo integral de la niñez. Su legado ha sido retomado como inspiración para iniciativas educativas que buscan fortalecer la permanencia escolar y reducir las brechas sociales.
+        </p>
+      </div>
+    </header>
+
+    <main class="card" aria-label="Contenido del artículo">
+      <div class="card-inner">
+
+        <!-- Link #1 (Early content) -->
+        <p>
+          Comprender quién fue Rita Cetina y por qué su nombre se asocia a programas educativos permite dimensionar el valor social y cultural que representa dentro del sistema educativo mexicano. Este artículo ofrece un análisis profesional y detallado de su significado, su impacto y su relevancia actual.
+          <a href="https://buscadordeestatuss.mx/beca-rita-cetina/" target="_blank" rel="noopener">Rita Cetina</a>
+        </p>
+
+        <h2>Contexto Histórico de Rita Cetina</h2>
+        <p>
+          Rita Cetina fue una figura destacada por su vocación educativa y su compromiso con la formación de las nuevas generaciones. En una época en la que el acceso a la educación no era equitativo, su trabajo estuvo orientado a abrir espacios de aprendizaje y a promover la enseñanza como una herramienta de transformación social.
+        </p>
+
+        <p>
+          Su labor se centró en la educación como un derecho fundamental y como un medio para mejorar las condiciones de vida de las personas. Este enfoque la convirtió en un referente del pensamiento educativo progresista y en un símbolo de la importancia de la educación inclusiva.
+        </p>
+
+        <h2>Rita Cetina y su Relación con la Educación</h2>
+        <p>
+          El nombre de Rita Cetina está profundamente vinculado con los valores de la educación pública. Su visión reconocía la enseñanza no solo como transmisión de conocimientos, sino como un proceso integral que fomenta el pensamiento crítico, la disciplina y la responsabilidad social.
+        </p>
+
+        <p>
+          Esta perspectiva ha influido en la manera en que se conciben los programas educativos actuales. Al asociar su nombre con iniciativas de apoyo escolar, se refuerza la idea de que la educación debe estar al alcance de todos, sin importar el contexto económico o social.
+        </p>
+
+        <h2>Significado del Nombre Rita Cetina en Programas Educativos</h2>
+        <p>
+          El uso del nombre Rita Cetina en programas educativos contemporáneos no es casual. Representa un reconocimiento a su legado y a los principios que defendió. Asociar su nombre a un apoyo educativo transmite un mensaje claro de compromiso con la equidad, la justicia social y la permanencia escolar.
+        </p>
+
+        <p>
+          Este simbolismo fortalece la identidad de los programas educativos y les otorga un sentido histórico y cultural que va más allá del apoyo económico.
+        </p>
+
+        <h2>Impacto Social del Legado de Rita Cetina</h2>
+        <p>
+          El legado de Rita Cetina tiene un impacto que trasciende generaciones. Su enfoque educativo ha contribuido a sentar las bases de una visión más inclusiva de la enseñanza, donde la educación se entiende como un motor de cambio social.
+        </p>
+
+        <p>
+          Al inspirar programas que apoyan a estudiantes en situación de vulnerabilidad, su nombre se asocia directamente con la reducción de desigualdades y la creación de oportunidades reales para el desarrollo personal y académico.
+        </p>
+
+        <!-- Link #2 (Mid content) -->
+        <div class="panel" aria-label="Acceso recomendado en el contenido">
+          <strong>Consulta relacionada:</strong>
+          <p style="margin:10px 0 0 0;">
+            Para visualizar un entorno de seguimiento de estatus, puedes consultar:
+            <a href="http://estatus-beca.s3-website.eu-central-1.amazonaws.com/" target="_blank" rel="noopener">Buscador de Estatus</a>
+          </p>
+        </div>
+
+        <h2>Rita Cetina como Referente de Inclusión Educativa</h2>
+        <p>
+          Rita Cetina es considerada un referente de inclusión educativa por su énfasis en ampliar el acceso al conocimiento. Su visión se alineaba con la idea de que la educación debe adaptarse a las necesidades de la sociedad y responder a los desafíos sociales.
+        </p>
+
+        <p>
+          Este enfoque sigue siendo relevante en la actualidad, especialmente en contextos donde la permanencia escolar depende en gran medida del apoyo institucional y comunitario.
+        </p>
+
+        <h2>Relevancia Actual de Rita Cetina</h2>
+        <p>
+          En el contexto actual, Rita Cetina sigue siendo una figura significativa debido a la forma en que su nombre se integra en políticas y programas educativos. Su legado aporta legitimidad y sentido social a iniciativas que buscan garantizar el derecho a la educación desde las primeras etapas formativas.
+        </p>
+
+        <p>
+          La referencia a Rita Cetina refuerza el valor de la educación básica como pilar del desarrollo humano y social.
+        </p>
+
+        <h2>Rita Cetina y el Desarrollo de la Educación Básica</h2>
+        <p>
+          La educación básica es una etapa crucial en la formación de las personas. Asociar el nombre de Rita Cetina a programas enfocados en este nivel educativo subraya la importancia de invertir en la infancia y en el fortalecimiento del aprendizaje temprano.
+        </p>
+
+        <p>
+          Este enfoque contribuye a crear condiciones más favorables para el desarrollo académico futuro y para la construcción de una sociedad más preparada y equitativa.
+        </p>
+
+        <h2>Influencia Cultural y Educativa</h2>
+        <p>
+          Más allá del ámbito institucional, Rita Cetina representa una influencia cultural relacionada con el valor del conocimiento y la responsabilidad social. Su figura inspira a docentes, estudiantes y familias a reconocer la educación como una herramienta de progreso colectivo.
+        </p>
+
+        <p>
+          Esta influencia cultural refuerza el papel de la educación como un elemento central en la construcción de comunidades más justas y participativas.
+        </p>
+
+        <h2>Importancia de Reconocer Figuras Educativas</h2>
+        <p>
+          Reconocer figuras como Rita Cetina permite valorar el esfuerzo histórico por mejorar la educación y ampliar su alcance. Este reconocimiento no solo honra el pasado, sino que también orienta el presente y el futuro de las políticas educativas.
+        </p>
+
+        <p>
+          Al mantener vivo su legado, se fortalece la identidad educativa y se promueve una visión más humana e inclusiva del aprendizaje.
+        </p>
+
+        <h2>Conclusión</h2>
+        <p>
+          Rita Cetina es mucho más que un nombre asociado a programas educativos. Representa un legado de compromiso con la enseñanza, la igualdad y la justicia social. Su visión educativa continúa influyendo en la manera en que se conciben y desarrollan las políticas de apoyo a la educación básica en México.
+        </p>
+
+        <p>
+          Reconocer la importancia de Rita Cetina es reconocer el valor de la educación como derecho y como herramienta de transformación social. Su legado sigue vigente, inspirando iniciativas que buscan garantizar oportunidades reales de aprendizaje para las nuevas generaciones.
+        </p>
+
+        <div class="divider" role="separator" aria-hidden="true"></div>
+
+        <div class="footer">
+          Diseño UI/UX moderno, colorido y profesional con jerarquía clara y estilo “ingredient” en enlaces.
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+</body>
+</html>
